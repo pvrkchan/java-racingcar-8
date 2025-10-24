@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Validator {
+public class StringValidator {
     private static final String NAME_PATTERN = "[a-zA-Z,]*";
 
     public static List<String> validate(String carNames) {

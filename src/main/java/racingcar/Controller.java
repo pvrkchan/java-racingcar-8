@@ -9,5 +9,7 @@ public class Controller {
     public void run() {
         String carNames = InputView.registerCarNames();
         List<String> carList = Validator.validate(carNames);
+
+        int numberOfTry = InputView.registerNumberOfTry();
     }
 }

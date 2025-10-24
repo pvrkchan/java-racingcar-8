@@ -1,9 +1,6 @@
 package racingcar;
 
-import racingcar.model.Car;
-import racingcar.model.Game;
-import racingcar.model.NumberValidator;
-import racingcar.model.StringValidator;
+import racingcar.model.*;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -19,6 +16,7 @@ public class Controller {
 
         Game game = new Game();
         List<Car> cars = game.run(carList, numberOfTry);
-        OutputView.printResult(numberOfTry, cars);
+        List<String> winners = Judge.findWinners(cars);
+        OutputView.printResult(numberOfTry, cars, winners);
     }
 }

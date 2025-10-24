@@ -1,5 +1,6 @@
 package racingcar;
 
+import racingcar.model.Game;
 import racingcar.model.NumberValidator;
 import racingcar.model.StringValidator;
 import racingcar.view.InputView;
@@ -13,5 +14,8 @@ public class Controller {
 
         int numberOfTry = InputView.registerNumberOfTry();
         NumberValidator.validate(numberOfTry);
+
+        Game game = new Game();
+        game.run(carList, numberOfTry);
     }
 }

@@ -9,14 +9,16 @@
 
 
 2. 사용자로부터 받은 문자열(경주할 자동차 이름들)에 대하여 검증한다.
-    - [ ] 각 자동차의 이름은 영문자 5자 이하만 가능하다. 
-    - [ ] 각 자동차 이름은 쉼표(,)를 기준으로 구분한다.
-    - [ ] 경주의 특성상, 자동차 이름은 최소 2개가 입력되어야 한다.
-    - [ ] `* 예외처리` 문자열이 쉼표로 시작되었을 때, **IllegalArgumentException** 발생
-    - [ ] `* 예외처리` 자동차 이름이 한 개만 주어졌을 때 **IllegalArgumentException** 발생
-    - [ ] `* 예외처리` 자동차 이름에 영문자를 제외한 것이 입력된다면 **IllegalArgumentException** 발생
-    - [ ] `* 예외처리` 자동차 이름이 6자 이상이라면, **IllegalArgumentException** 발생
-    - [ ] `* 예외처리` 쉼표 사이에 빈 문자열 입력되었을 때, **IllegalArgumentException** 발생
+    - [X] 각 자동차의 이름은 영문자 5자 이하만 가능하다. 
+    - [X] 각 자동차 이름은 쉼표(,)를 기준으로 구분한다.
+    - [X] 경주의 특성상, 자동차 이름은 최소 2개가 입력되어야 한다.
+    - [X] `* 예외처리` 문자열이 빈 문자열일 때, **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 문자열에 영문자와 쉼표를 제외한 것이 입력된다면 **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 문자열이 쉼표로 시작되거나 끝났을 때, **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 자동차 이름이 한 개만 주어졌을 때 **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 자동차 이름이 6자 이상이라면, **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 쉼표 사이에 빈 문자열 입력되었을 때, **IllegalArgumentException** 발생
+    - [X] `* 예외처리` 중복된 이름이 입력되었을 때, **IllegalArgumentException** 발생
 
 
 3. 사용자로부터 시도할 횟수를 입력받는다.

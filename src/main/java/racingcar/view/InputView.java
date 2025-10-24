@@ -13,7 +13,7 @@ public class InputView {
         try {
             return Integer.parseInt(Console.readLine());
         } catch (NumberFormatException e){
-            throw new IllegalArgumentException("숫자를 입력하세요.");
+            throw new IllegalArgumentException("1 이상의 양의 정수를 입력하세요.");
         }
     }
 }

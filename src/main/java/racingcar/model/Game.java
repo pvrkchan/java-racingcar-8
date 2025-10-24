@@ -9,12 +9,13 @@ public class Game {
     private List<Car> cars = new ArrayList<Car>();
     private int numberOfTry;
 
-    public void run(List<String> carList, int numberOfTry) {
+    public List<Car> run(List<String> carList, int numberOfTry) {
         initGame(carList, numberOfTry);
         playGame();
+        return cars;
     }
 
-    public void initGame(List<String> carList, int numberOfTry) {
+    private void initGame(List<String> carList, int numberOfTry) {
         for(String carName : carList) {
             Car car = new Car(carName, 0);
             cars.add(car);
@@ -22,7 +23,7 @@ public class Game {
         this.numberOfTry = numberOfTry;
     }
 
-    public void playGame() {
+    private void playGame() {
         for(int i = 0; i < numberOfTry; i++) {
             eachTry();
         }
@@ -34,6 +35,7 @@ public class Game {
             if(randomNumber >= 4) {
                 car.goForward();
             }
+            car.recordTrace(car.getPosition());
         }
     }
 }

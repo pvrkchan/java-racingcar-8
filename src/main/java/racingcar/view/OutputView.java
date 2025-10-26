@@ -5,29 +5,29 @@ import racingcar.model.Car;
 import java.util.List;
 
 public class OutputView {
-    public static void printResult(int numberOfTry, List<Car> cars, List<String> winners) {
+    public static void result(int numberOfTry, List<Car> cars, List<String> winners) {
         System.out.println("\n실행 결과");
         for (int i = 0; i < numberOfTry; i++) {
-            printEachTryResult(i, cars);
+            eachTryResult(i, cars);
             System.out.println();
         }
-        printWinners(winners);
+        winners(winners);
     }
 
-    private static void printWinners(List<String> winners) {
+    private static void winners(List<String> winners) {
         System.out.print("최종 우승자 : ");
         System.out.println(String.join(", ", winners));
     }
 
-    private static void printEachTryResult(int i, List<Car> cars) {
+    private static void eachTryResult(int i, List<Car> cars) {
         for(Car car : cars) {
             System.out.print(car.getName() + " : ");
-            printPositionWithHyphen(car.getTrace(i));
+            positionWithHyphen(car.getTrace(i));
             System.out.println();
         }
     }
 
-    private static void printPositionWithHyphen(int trace) {
+    private static void positionWithHyphen(int trace) {
         for(int i = 0; i < trace; i++) {
             System.out.print("-");
         }

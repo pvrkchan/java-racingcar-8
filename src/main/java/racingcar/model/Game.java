@@ -10,12 +10,12 @@ public class Game {
     private int numberOfTry;
 
     public List<Car> run(List<String> carList, int numberOfTry) {
-        initGame(carList, numberOfTry);
-        playGame();
+        init(carList, numberOfTry);
+        play();
         return cars;
     }
 
-    private void initGame(List<String> carList, int numberOfTry) {
+    private void init(List<String> carList, int numberOfTry) {
         for(String carName : carList) {
             Car car = new Car(carName, 0);
             cars.add(car);
@@ -23,7 +23,7 @@ public class Game {
         this.numberOfTry = numberOfTry;
     }
 
-    private void playGame() {
+    private void play() {
         for(int i = 0; i < numberOfTry; i++) {
             eachTry();
         }

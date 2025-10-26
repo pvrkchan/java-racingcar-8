@@ -8,15 +8,15 @@ import java.util.List;
 
 public class Controller {
     public void run() {
-        String carNames = InputView.registerCarNames();
+        String carNames = InputView.carNames();
         List<String> carList = StringValidator.validate(carNames);
 
-        int numberOfTry = InputView.registerNumberOfTry();
+        int numberOfTry = InputView.numberOfTry();
         NumberValidator.validate(numberOfTry);
 
         Game game = new Game();
         List<Car> cars = game.run(carList, numberOfTry);
-        List<String> winners = Judge.findWinners(cars);
-        OutputView.printResult(numberOfTry, cars, winners);
+        List<String> winners = Judge.winners(cars);
+        OutputView.result(numberOfTry, cars, winners);
     }
 }

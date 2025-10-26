@@ -26,12 +26,25 @@ public class Car {
         return trace.get(index);
     }
 
-    public void goForward() {
-        position++;
+    public void goForwardOrStop(int randomNumber) {
+        if(randomNumber >= 4) {
+            position++;
+        }
     }
 
     public void recordTrace(int currentPosition) {
         trace.add(currentPosition);
+    }
+
+    public String isWinner(int maxPosition) {
+        if(position == maxPosition) {
+            return name;
+        }
+        return null;
+    }
+
+    public int isMaxPosition(int maxPosition) {
+        return Math.max(position, maxPosition);
     }
 }
 

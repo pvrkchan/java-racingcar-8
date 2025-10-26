@@ -53,12 +53,16 @@ public class StringValidator {
 
     public static void validateLengthOfName(List<String> carList) {
         for(String carName : carList){
-            if(carName.length() > 5){
-                throw new IllegalArgumentException("자동차의 이름은 최대 5글자까지 입력 가능합니다.");
-            }
-            if(carName.isEmpty()){
-                throw new IllegalArgumentException("콤마 사이에 아무것도 입력되지 않았습니다.");
-            }
+            checkEachName(carName);
+        }
+    }
+
+    public static void checkEachName(String carName) {
+        if(carName.length() > 5){
+            throw new IllegalArgumentException("자동차의 이름은 최대 5글자까지 입력 가능합니다.");
+        }
+        if(carName.isEmpty()){
+            throw new IllegalArgumentException("콤마 사이에 아무것도 입력되지 않았습니다.");
         }
     }
 

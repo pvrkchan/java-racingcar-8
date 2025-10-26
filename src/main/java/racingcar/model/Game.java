@@ -32,9 +32,7 @@ public class Game {
     private void eachTry() {
         for(Car car : cars) {
             int randomNumber = Randoms.pickNumberInRange(0, 9);
-            if(randomNumber >= 4) {
-                car.goForward();
-            }
+            car.goForwardOrStop(randomNumber);
             car.recordTrace(car.getPosition());
         }
     }

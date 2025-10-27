@@ -20,7 +20,7 @@ public class OutputView {
     }
 
     private static void eachTryResult(int i, List<Car> cars) {
-        for(Car car : cars) {
+        for (Car car : cars) {
             System.out.print(car.getName() + " : ");
             positionWithHyphen(car.getTrace(i));
             System.out.println();
@@ -28,7 +28,7 @@ public class OutputView {
     }
 
     private static void positionWithHyphen(int trace) {
-        for(int i = 0; i < trace; i++) {
+        for (int i = 0; i < trace; i++) {
             System.out.print("-");
         }
     }

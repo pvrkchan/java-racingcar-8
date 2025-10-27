@@ -12,7 +12,7 @@ public class InputView {
         System.out.println("시도할 횟수는 몇 회인가요?");
         try {
             return Integer.parseInt(Console.readLine());
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException("1 이상의 양의 정수를 입력하세요.");
         }
     }

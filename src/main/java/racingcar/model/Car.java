@@ -27,7 +27,7 @@ public class Car {
     }
 
     public void goForwardOrStop(int randomNumber) {
-        if(randomNumber >= 4) {
+        if (randomNumber >= 4) {
             position++;
         }
     }
@@ -37,7 +37,7 @@ public class Car {
     }
 
     public String isWinner(int maxPosition) {
-        if(position == maxPosition) {
+        if (position == maxPosition) {
             return name;
         }
         return null;
@@ -47,4 +47,3 @@ public class Car {
         return Math.max(position, maxPosition);
     }
 }
-

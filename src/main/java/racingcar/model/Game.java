@@ -16,7 +16,7 @@ public class Game {
     }
 
     private void init(List<String> carList, int numberOfTry) {
-        for(String carName : carList) {
+        for (String carName : carList) {
             Car car = new Car(carName, 0);
             cars.add(car);
         }
@@ -24,13 +24,13 @@ public class Game {
     }
 
     private void play() {
-        for(int i = 0; i < numberOfTry; i++) {
+        for (int i = 0; i < numberOfTry; i++) {
             eachTry();
         }
     }
 
     private void eachTry() {
-        for(Car car : cars) {
+        for (Car car : cars) {
             int randomNumber = Randoms.pickNumberInRange(0, 9);
             car.goForwardOrStop(randomNumber);
             car.recordTrace(car.getPosition());

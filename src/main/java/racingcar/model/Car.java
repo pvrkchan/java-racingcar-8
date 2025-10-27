@@ -1,49 +1,44 @@
 package racingcar.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Car {
-    private String name;
-    private int position;
-    private List<Integer> trace;
+    private CarName name;
+    private CarPosition position;
 
-    public Car(String name, int position) {
+    public Car(CarName name, CarPosition position) {
         this.name = name;
         this.position = position;
-        this.trace = new ArrayList<>();
-    }
-
-    public String getName() {
-        return name;
     }
 
     public int getPosition() {
-        return position;
+        return position.getPosition();
     }
 
     public int getTrace(int index) {
-        return trace.get(index);
+        return position.getTrace(index);
     }
 
     public void goForwardOrStop(int randomNumber) {
         if (randomNumber >= 4) {
-            position++;
+            position.goForward();
         }
     }
 
     public void recordTrace(int currentPosition) {
-        trace.add(currentPosition);
+        position.stamp(currentPosition);
     }
 
     public String isWinner(int maxPosition) {
-        if (position == maxPosition) {
-            return name;
+        if (getPosition() == maxPosition) {
+            return name.toString();
         }
         return null;
     }
 
     public int isMaxPosition(int maxPosition) {
-        return Math.max(position, maxPosition);
+        return Math.max(getPosition(), maxPosition);
+    }
+
+    public CarName getName() {
+        return name;
     }
 }

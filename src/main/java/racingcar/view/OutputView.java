@@ -5,13 +5,13 @@ import racingcar.model.Car;
 import java.util.List;
 
 public class OutputView {
-    public static void result(int numberOfTry, List<Car> cars, List<String> winners) {
+    public static void result(int numberOfTry, List<Car> cars, List<String> winnerList) {
         System.out.println("\n실행 결과");
         for (int i = 0; i < numberOfTry; i++) {
             eachTryResult(i, cars);
             System.out.println();
         }
-        winners(winners);
+        winners(winnerList);
     }
 
     private static void winners(List<String> winners) {

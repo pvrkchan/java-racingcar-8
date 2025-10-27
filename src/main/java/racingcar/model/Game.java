@@ -11,13 +11,7 @@ public class Game {
     private List<Car> cars = new ArrayList<Car>();
     private int numberOfTry;
 
-    public List<Car> run(List<String> carList, int numberOfTry) {
-        init(carList, numberOfTry);
-        play();
-        return cars;
-    }
-
-    private void init(List<String> carList, int numberOfTry) {
+    public Game(List<String> carList, int numberOfTry) {
         initValidator(carList);
         for (String carName : carList) {
             Car car = new Car(new CarName(carName), new CarPosition(0));
@@ -26,10 +20,11 @@ public class Game {
         this.numberOfTry = numberOfTry;
     }
 
-    private void play() {
+    public List<Car> play() {
         for (int i = 0; i < numberOfTry; i++) {
             eachTry();
         }
+        return cars;
     }
 
     private void eachTry() {
@@ -40,7 +35,7 @@ public class Game {
         }
     }
 
-    public void initValidator(List<String> carList) {
+    private void initValidator(List<String> carList) {
         Set<String> carSet = new HashSet<String>(carList);
         if (carSet.size() != carList.size()) {
             throw new IllegalArgumentException("중복된 이름의 자동차를 등록하였습니다.");

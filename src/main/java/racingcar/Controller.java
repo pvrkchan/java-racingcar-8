@@ -14,8 +14,8 @@ public class Controller {
         int numberOfTry = InputView.numberOfTry();
         NumberValidator.validate(numberOfTry);
 
-        Game game = new Game();
-        List<Car> cars = game.run(carList, numberOfTry);
+        Game game = new Game(carList, numberOfTry);
+        List<Car> cars = game.play();
         List<String> winners = Judge.winners(cars);
         OutputView.result(numberOfTry, cars, winners);
     }

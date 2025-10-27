@@ -20,7 +20,7 @@ public class CarName {
         }
     }
 
-    public static void lengthOfName(String name) {
+    private static void lengthOfName(String name) {
         if (name.length() > 5) {
             throw new IllegalArgumentException("자동차의 이름은 최대 5글자까지 입력 가능합니다.");
         }

@@ -17,7 +17,7 @@ public class StringValidator {
             throw new IllegalArgumentException("쉼표가 잘못 입력되었습니다.");
     }
 
-    public static void endWithComma(String carNames) {
+    private static void endWithComma(String carNames) {
         if (carNames.endsWith(",")) {
             throw new IllegalArgumentException("쉼표가 잘못 입력되었습니다.");
         }
